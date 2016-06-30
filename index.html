@@ -3,7 +3,7 @@
     <head>
         <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
         <script>
-            $.get("https://output.jsbin.com/lekovu").done(resp => {
+            $.get("https://output.jsbin.com/" + location.search.substring(4, location.search.length)).done(resp => {
               var newDoc = document.open("text/html", "replace");
               newDoc.write(resp);
               newDoc.close();
