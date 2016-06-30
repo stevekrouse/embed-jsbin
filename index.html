@@ -5,7 +5,7 @@
         <script>
             $.get("https://output.jsbin.com/" + location.search.substring(4, location.search.length)).done(resp => {
               var newDoc = document.open("text/html", "replace");
-              newDoc.write(resp);
+              newDoc.write(resp.replace('jsbinShowEdit && jsbinShowEdit({"static":"https://static.jsbin.com","root":"https://jsbin.com"});', ''));
               newDoc.close();
             });
         </script>
