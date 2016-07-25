@@ -3,7 +3,7 @@
     <head>
         <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
         <script>
-            $.get("https://output.jsbin.com/" + location.search.substring(4, location.search.length)).done(resp => {
+            $.get("https://output.jsbin.com/" + location.search.substring(4, location.search.length)).done(function(resp) {
               var newDoc = document.open("text/html", "replace");
               newDoc.write(resp.replace('jsbinShowEdit && jsbinShowEdit({"static":"https://static.jsbin.com","root":"https://jsbin.com"});', ''));
               newDoc.close();
